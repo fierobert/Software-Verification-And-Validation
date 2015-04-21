@@ -28,16 +28,16 @@ public class TeamAssignment5{
 		return str1;
     }
 	public String Global(String str1){
-        str1 = "G(" + str1 + ")";
+        str1 = "G (" + str1 + ")";
 		return str1;
     }
 	public String generateFormula(String L_LTL, String P_LTL, String Q_LTL, String R_LTL){
 
 	String formula, A_LTL, B_LTL;
-	B_LTL = not(andR(Q_LTL, not(R_LTL))) + "U" + R_LTL;
-	A_LTL = not(not(R_LTL) + "U" + andL(andR(P_LTL,not(R_LTL)),B_LTL));
+	B_LTL = not(andR(Q_LTL, not(R_LTL))) + "U " + R_LTL;
+	A_LTL = not(not(R_LTL) + "U " + andL(andR(P_LTL,not(R_LTL)),B_LTL));
 	/*-((-R_LTL)U((P_LTL ANDR -R_LTL) ANDL ((-(Q_LTL ANDR -R_LTL))UR_LTL)))*/
-	formula = Global(andL(L_LTL, not(R_LTL)) + "->"  + andL(L_LTL, A_LTL));
+	formula = Global(andL(L_LTL, not(R_LTL)) + " -> "  + andL(L_LTL, A_LTL));
 	formula = formula.replaceAll("\\.", "");
 	
 	return formula;
@@ -121,8 +121,8 @@ public class TeamAssignment5{
         return str1.substring(0, lastIndex) + str2;
     }
     
-    public static final String L_EventualC = "(l1.&X(!l2.U(l2.&X(!l2.U(!l3.U(l3.))))))";//(l1^X(¬l2 U (l2 ^ X (¬l2 U (¬l3 U l3))))) 
-    public static final String P_EventualC = "(p1.&X(!p2.U(p2.&X(!p2.U(!p3.U(p3.))))))";//(p1^X(¬p2 U (p2 ^ X (¬p2 U (¬p3 U p3)))))
-    public static final String Q_EventualC = "(q1.&X(!q2.U(q2.&X(!q2.U(!q3.U(q3.))))))";//(q1^X(¬q2 U (q2 ^ X (¬q2 U (¬q3 U q3)))))
-    public static final String R_EventualC = "(r1.&X(!r2.U(r2.&X(!r2.U(!r3.U(r3.))))))";//(r1^X(¬r2 U (r2 ^ X (¬r2 U (¬r3 U r3))))) 
+    public static final String L_EventualC = "(l1 . & X (!l2 . U (l2 . & X (!l3 . U (l3 .)))))";//(l1^X(¬l2 U (l2 ^ X (¬l2 U (¬l3 U l3))))) 
+    public static final String P_EventualC = "(p1 . & X (!p2 . U (p2 . & X (!p3 . U (p3 .)))))";//(p1^X(¬p2 U (p2 ^ X (¬p2 U (¬p3 U p3)))))
+    public static final String Q_EventualC = "(q1 . & X (!q2 . U (q2 . & X (!q3 . U (q3 .)))))";//(q1^X(¬q2 U (q2 ^ X (¬q2 U (¬q3 U q3)))))
+    public static final String R_EventualC = "(r1 . & X (!r2 . U (r2 . & X (!r3 . U (r3 .)))))";//(r1^X(¬r2 U (r2 ^ X (¬r2 U (¬r3 U r3))))) 
 }
