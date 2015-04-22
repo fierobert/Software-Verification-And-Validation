@@ -88,16 +88,17 @@ public class Formulas_Version_3{
 			*/
 	
 			case "L_ConsecutiveC":
-				returnLTL = "((l1 .)& X((l2 .)(&X(l3 .))))";//(l1^X(l2^Xl3)))
+			    returnLTL = "((l1 .)& X((l2 .)& X(l3 .)))";;//(l1^X(l2^Xl3)))
+				
 				break;
 			case "P_ConsecutiveC":
-				returnLTL = "((p1 .)& X((p2 .)(&X(p3 .))))";//(p1^X(p2^Xp3)))
+			    returnLTL = "((p1 .)& X((p2 .)& X(p3 .)))";;//(p1^X(p2^Xp3)))
 				break;
 			case "Q_ConsecutiveC":
-				returnLTL = "((q1 .)& X((q2 .)(&X(q3 .))))";//(q1^X(q2^Xq3)))
+			    returnLTL = "((q1 .)& X((q2 .)& X(q3 .)))";//(q1^X(q2^Xq3)))
 				break;
 			case "R_ConsecutiveC":
-				returnLTL = "((r1 .)& X((r2 .)(&X(r3 .))))";//(r1^X(r2^Xr3)))
+				returnLTL = "((r1 .)& X((r2 .)& X(r3 .)))";//(r1^X(r2^Xr3)))
 				break;
 	
 			/*

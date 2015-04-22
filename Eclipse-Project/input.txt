@@ -1,6 +1,11 @@
-L_EventualC
-P_EventualC
-Q_EventualC
+L_ConsecutiveC
+P_ConsecutiveC
+Q_ConsecutiveE
+R_ConsecutiveC
+------------------
+L_ConsecutiveC
+P_ConsecutiveC
+Q_ParallelC
 R_ConsecutiveC
 ------------------
 L_AtLeastOneC
